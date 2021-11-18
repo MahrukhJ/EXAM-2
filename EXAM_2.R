@@ -63,5 +63,29 @@ there is a significant difference in the people offered health insurance between
 people with at least a bachelors degree who work part time. Therefore, we can reject the null hypothesis and accept the alternative hypothesis!
   
   ------------------------------Question 2------------------------------ 
+Using a subset of the data (so you can do this question without R), the following coefficients are estimated in a logit model where employer offering health insurance depends on $Age$, $Age^2$, $Female$, and interaction of $Female$ with the age terms.
+
+Variable       | Coeff    | Std Error
+-------------- | -------  | ----------
+  $Age$          | -0.019   | 0.0018
+$Age^2$        | 0.00002  | 0.000002
+$Female$       | -0.470   | 0.1206
+$Age*Female$   | 0.0082   | 0.0026
+$Age^2*Female$ | -0.00001 | 0.000003
+$Constant$     | 1.84     | 0.09
+
+a. What is the predicted probability that a 30-year-old person (not a female) will have a job with benefits?
+  P = (1/(1+e^(-)((-0.019)(30) + (0.00002)(30^2) + (-0.470)(0) + (0.0082)(0) + (-0.00001)(0) + 1.84))
+  P = 0.08106
+b. What is the predicted probability that a 30-year-old female person will have a job with benefits?
+  P = (1/(1+e^(-)((-0.019)(30) + (0.00002)(30^2) + (-0.470)(30) + (0.0082)(30) + (-0.00001)(30) + 1.84))
+  P = 0.0989
+c. Describe and explain the impact of the squared age terms in the model, for male and female.
+  Essentially, incorporating Age^2 to age, allows us to model the effect of differing ages, rather than 
+  assuming that the effect is linear for all ages, which also may have a non-linear relationship with the independent variable.
+  Specifically, more often than not, regression models can be approximated through use of a polynomial so including Age^2 and Age^3
+  lets us estimate the coefficients for the approximation for a known/unknown non-linear function of x, which is Age, in this model.
+  Testing and observing these coefficients allows us to test if the relationship is reasonably linear of if non-linear terms 
+  would be better off to use in the model. 
 
 
