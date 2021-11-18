@@ -88,4 +88,11 @@ c. Describe and explain the impact of the squared age terms in the model, for ma
   Testing and observing these coefficients allows us to test if the relationship is reasonably linear of if non-linear terms 
   would be better off to use in the model. 
 
+  ------------------------------Question 3------------------------------ 
+Now do your own analysis using "NHIS2020_data.RData". Explore likelihood of people working at a job that offers health insurance, or choose a different topic if you would like. The data includes information on region, whether urban or rural area, usual hours of work, fulltime or parttime, health status, height, weight and BMI, along with demographics like age, race/ethnicity, gender, sexual orientation, family size, marital status, whether served in armed forces, citizenship with years in US, and household income.  
++ Choose a subgroup of the sample to consider and provide summary statistics of that subgroup. Explain why this subgroup is interesting.
++ Form a hypothesis test about an interesting variable, explore whether your chosen subgroup differs from the rest of sample. Please provide both a p-value for the hypothesis test and a confidence interval. Write a short paragraph explaining the test (carefully noting what is the null hypothesis) and explaining the results of that test.
++ With a linear probability model (OLS), can you find relevant information to predict an interesting outcome? How good is the model? Discuss. Include hypothesis tests about individual or joint coefficient values. Include some predicted values.
++ Now how does a logit model perform? What additional information can you learn from that? Discuss. Include hypothesis tests about individual or joint coefficient values. Include some predicted values.
++ Can you estimate some other models? What is the marginal value of those? Impress me.
 
