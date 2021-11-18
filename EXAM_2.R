@@ -99,3 +99,63 @@ fulltime or parttime, health status, height, weight and BMI, along with demograp
 + Now how does a logit model perform? What additional information can you learn from that? Discuss. Include hypothesis tests about individual or joint coefficient values.
   Include some predicted values. Can you estimate some other models? What is the marginal value of those? Impress me.
 
+
+#Subgroup
+My subgroup will consist of people who are between the ages of 18 and 65 and live in the Northeast. 
+use_varb <- (AGE >= 18) & (AGE <= 65) & (REGION == "Northeast")
+dat_use <- subset(data_NHIS,use_varb)
+summary(dat_use)
+detach(data_NHIS)
+attach(dat_use)
+#Some Stats
+table(dat_use$RACEA,dat_use$EDUC)
+" NIU no school less than hs 12th grade no diploma HS diploma GED some college
+  white             0         1           65                    23        640  51          359
+  Black             0         1           34                     7        103  11           63
+  Aleut Alaskan     0         0            3                     0          6   0            1
+  American Indian   0         0            1                     0          3   3            1
+  Asian             0         0            9                     5         41   3           19
+  Other             0         0            3                     1          8   0            5
+  refused           0         0            0                     0          0   0            1
+  not ascertained   0         0           32                     6         51   5           29
+  unknown           0         0            0                     0          0   0            0
+                 
+                  assoc deg in tech or occ assoc deg academic bachelors masters professional degree doctoral
+  white                                 85                273       833     476                  47       78
+  Black                                 13                 44        74      42                   4        5
+  Aleut Alaskan                          1                  1         2       0                   1        0
+  American Indian                        0                  5         4       3                   0        0
+  Asian                                  1                  6        92      70                   5       17
+  Other                                  2                  2        16       6                   0        1
+  refused                                0                  0         1       0                   1        0
+  not ascertained                        5                 14        21       4                   1        0
+  unknown                                0                  1         0       0                   0        0
+                 
+                  refused dont know
+  white                 5         8
+  Black                 1         5
+  Aleut Alaskan         0         0
+  American Indian       0         0
+  Asian                 1         0
+  Other                 0         0
+  refused               0         0
+  not ascertained       0         1
+  unknown               0         0"
+
+summary(EMPSTAT)
+"         NIU     Employed not employed    dont know 
+           0         2817          926          129"
+summary(HOURSWRK)
+"   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       0      40      29      40      95      32"
+summary(EMPFT)
+"     NIU  parttime  fulltime   refused        NA dont know 
+     1055       390      2403         4        17         3"
+
+#Forming a hypothesis test
+
+
+
+
+
+  
