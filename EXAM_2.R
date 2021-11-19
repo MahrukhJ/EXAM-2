@@ -474,4 +474,10 @@ model2_elasticnet <-  glmnet(as.matrix(sobj$data[,-1]),sobj$data$d_YES_HINSURANC
 # or try different alpha values to see if you can improve
 print(model2_elasticnet)
 
+require(spikeslab)
+set.seed(54321)
+model1_spikeslab <- spikeslab(sobj$formula, data = sobj$data)
+summary(model1_spikeslab)
+print(model1_spikeslab)
+plot(model1_spikeslab)
 
